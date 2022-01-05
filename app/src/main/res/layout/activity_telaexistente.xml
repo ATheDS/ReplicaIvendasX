@@ -1,67 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="32dp"
-            android:layout_margin="20dp"
-            android:layout_height="32dp"
-            android:src="@drawable/ic_baseline_arrow_back_ios_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="#c00" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PROMOÇõES"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
-
+        android:layout_height="wrap_content">
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:background="@color/white"
             android:scrollbars="none"
-            android:background="#f2f2f2"
-            android:paddingVertical="10dp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0"
-            app:tabIndicatorHeight="8dp">
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorHeight="1dp">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
-                android:paddingHorizontal="10dp"
-
                 android:layout_height="wrap_content"
-                android:text="Mapex">
+
+                android:paddingHorizontal="10dp"
+                android:text="Meu espaço">
 
 
             </com.google.android.material.tabs.TabItem>
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
-                android:paddingHorizontal="10dp"
                 android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
                 android:text="maratonas" />
 
             <com.google.android.material.tabs.TabItem
@@ -75,111 +45,122 @@
         </com.google.android.material.tabs.TabLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+            android:id="@+id/constraint1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraint3"
+            app:layout_constraintStart_toStartOf="@+id/constraint3"
             app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="250dp"
-                android:background="#f2f2f2"
-
-                android:paddingHorizontal="25dp"
+                android:id="@+id/imagemarca"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_margin="20dp"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/ic_dentil_foreground"
-                app:layout_constraintDimensionRatio="1.5:1"
                 app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:id="@+id/tv_faltam_dias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_weight="2"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Faltam dois dias"
+                android:textColor="@color/primary_orange"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imagemarca"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toTopOf="@+id/imageView2">
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imagemarca"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:ignore="NotSibling" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Maratona DENTIL"
-                    android:textColor="#1B1B1B"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/linearProgressIndicator"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:progress="70"
+                app:indicatorColor="@color/primary_orange"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagemarca"
+                app:layout_constraintVertical_bias="0.0"
+                app:trackCornerRadius="4dp"
+                app:trackThickness="12dp" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data de Inicio"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="@+id/textView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.3" />
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Alcançado"
+                android:textColor="@color/primary_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/linearProgressIndicator"
+                app:layout_constraintTop_toBottomOf="@id/linearProgressIndicator" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="24/12/2021"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="R$10.225,00"
+                android:textColor="@color/primary_gray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/linearProgressIndicator"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="Data de Termino"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Faltam"
+                android:textColor="@color/primary_gray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearProgressIndicator"
+                app:layout_constraintTop_toBottomOf="@id/linearProgressIndicator" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="26/12/2021"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
-                    app:layout_constraintVertical_bias="0.3" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="R$5.774,00"
+                android:textColor="@color/primary_gray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tv_descricao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="Descrição da Promoção"
-            android:textColor="@color/black"
-            android:textSize="22sp"
+            android:textColor="@color/primary_gray"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/constraint1" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="wrap_content"
@@ -187,7 +168,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6">
+            app:layout_constraintTop_toBottomOf="@+id/tv_descricao">
 
             <TextView
                 android:id="@+id/textView7"
@@ -195,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="1"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -206,7 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Venda Mínima:"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView10"
@@ -218,7 +199,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Valor Final:"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView11"
@@ -230,7 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bônus:"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView12"
@@ -243,7 +224,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$15.000,00"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
                 app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -255,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$19.999,99"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
                 app:layout_constraintStart_toEndOf="@+id/textView10"
@@ -267,7 +248,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$1.000,00"
-                android:textColor="#3E3E3E"
+                android:textStyle="bold"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
                 app:layout_constraintStart_toEndOf="@+id/textView11"
@@ -279,7 +261,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="2"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -291,7 +273,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$20.000,00"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView70"
                 app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -303,7 +285,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$24.999,99"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView70"
                 app:layout_constraintStart_toEndOf="@+id/textView20"
@@ -315,7 +297,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$2.500,00"
-                android:textColor="#3E3E3E"
+                android:textStyle="bold"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView70"
                 app:layout_constraintStart_toEndOf="@+id/textView21"
@@ -326,8 +309,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="2"
-                android:textColor="#3E3E3E"
+                android:text="3"
+                android:textColor="@color/primary_gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -339,7 +322,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$25.000,00"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView60"
                 app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -351,7 +334,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$34.999,99"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView60"
                 app:layout_constraintStart_toEndOf="@+id/textView30"
@@ -363,7 +346,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$2.000,00"
-                android:textColor="#3E3E3E"
+                android:textStyle="bold"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView60"
                 app:layout_constraintStart_toEndOf="@+id/textView31"
@@ -374,8 +358,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="2"
-                android:textColor="#3E3E3E"
+                android:text="4"
+                android:textColor="@color/primary_gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -387,7 +371,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$35.000,00"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView50"
                 app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -399,7 +383,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$59.999,99"
-                android:textColor="#3E3E3E"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView50"
                 app:layout_constraintStart_toEndOf="@+id/textView40"
@@ -411,7 +395,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="R$2.000,00"
-                android:textColor="#3E3E3E"
+                android:textStyle="bold"
+                android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView50"
                 app:layout_constraintStart_toEndOf="@+id/textView41"
@@ -422,21 +407,23 @@
         <View
             android:id="@+id/divider"
             android:layout_width="0dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint3"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:background="#C3C3C3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
             app:layout_constraintTop_toBottomOf="@id/divider">
 
             <TextView
@@ -444,23 +431,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mercadorias do dia:"
-                android:textColor="@color/black"
+                android:textColor="@color/primary_gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:text="Valido até:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -471,6 +446,7 @@
                 android:text="21/12/2021"
                 android:textColor="#3E3E3E"
                 android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
                 app:layout_constraintStart_toStartOf="@+id/textView13"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -479,114 +455,106 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Dentil enxaguante + Escova Dentil sortidas + Fio Dental(Secador)"
+                android:text="Dentil enxaguante + EscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscova Dentil sortidas + Fio Dental(Secador)"
+                android:textAlignment="center"
                 android:textColor="#3e3e3e"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView13"
-                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="31/12/2021"
-                android:textColor="#3e3e3e"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView16" />
-
-            <TextView
                 android:id="@+id/textView56"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Dentil enxaguante + Escova Dentil sortidas + Fio Dental(Secador)"
+                android:textAlignment="center"
                 android:textColor="#3e3e3e"
+
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView13"
-                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="31/12/2021"
-                android:textColor="#3e3e3e"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView56" />
-
-            <TextView
                 android:id="@+id/textView66"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Dentil enxaguante + Escova Dentil sortidas + Fio Dental(Secador)"
+                android:textAlignment="center"
                 android:textColor="#3e3e3e"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView13"
-                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView56" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="31/12/2021"
-                android:textColor="#3e3e3e"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView66" />
-
-            <TextView
                 android:id="@+id/textView76"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Dentil enxaguante + Escova Dentil sortidas + Fio Dental(Secador)"
+                android:textAlignment="center"
                 android:textColor="#3e3e3e"
+
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView13"
-                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView66" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="31/12/2021"
-                android:textColor="#3e3e3e"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView76" />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/white"
-            android:textColor="#626262"
-            app:strokeColor="#626262"
-            app:strokeWidth="2dp"
-            app:layout_constraintBaseline_toBottomOf="parent"
-            android:layout_marginVertical="20dp"
-            android:paddingVertical="15dp"
-            app:cornerRadius="4dp"
-            app:layout_constraintTop_toBottomOf="@id/textView76"
-            android:text="Voltar"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraint3"
+            app:layout_constraintStart_toStartOf="@+id/constraint3"
+            app:layout_constraintTop_toBottomOf="@id/constraint3">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:paddingVertical="14dp"
+                android:text="VOLTAR"
+                android:textColor="@color/primary_orange"
+                app:cornerRadius="161dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                app:strokeColor="@color/primary_orange"
+                app:strokeWidth="2dp" />
 
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/primary_orange"
+                android:paddingVertical="14dp"
+                android:text="GERAR PEDIDO"
+                android:textColor="@color/white"
+                app:cornerRadius="161dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+                app:strokeColor="@color/primary_orange"
+                app:strokeWidth="2dp" />
 
-
-
-
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 

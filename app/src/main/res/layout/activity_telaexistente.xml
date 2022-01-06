@@ -13,6 +13,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:scrollbars="none"
+
             android:elevation="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="10dp"
-                android:text="maratonas" />
+                android:text="Maratonas" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -47,10 +48,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint1"
             android:layout_width="0dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="@+id/constraint3"
-            app:layout_constraintStart_toStartOf="@+id/constraint3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
             <ImageView
@@ -163,7 +165,8 @@
             app:layout_constraintTop_toBottomOf="@+id/constraint1" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -222,37 +225,39 @@
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$15.000,00"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$19.999,99"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$1.000,00"
-                android:textStyle="bold"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />
 
             <TextView
@@ -271,37 +276,39 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$20.000,00"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView70"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView70" />
 
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$24.999,99"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView70"
-                app:layout_constraintStart_toEndOf="@+id/textView20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView70" />
 
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$2.500,00"
-                android:textStyle="bold"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView70"
-                app:layout_constraintStart_toEndOf="@+id/textView21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView70" />
 
             <TextView
@@ -320,37 +327,40 @@
                 android:id="@+id/textView30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$25.000,00"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView60"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView60" />
 
             <TextView
                 android:id="@+id/textView31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$34.999,99"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView60"
-                app:layout_constraintStart_toEndOf="@+id/textView30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView60" />
 
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$2.000,00"
-                android:textStyle="bold"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView60"
-                app:layout_constraintStart_toEndOf="@+id/textView31"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView60" />
 
             <TextView
@@ -369,37 +379,39 @@
                 android:id="@+id/textView40"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$35.000,00"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView50"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView50" />
 
             <TextView
                 android:id="@+id/textView41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$59.999,99"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView50"
-                app:layout_constraintStart_toEndOf="@+id/textView40"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView50" />
 
             <TextView
                 android:id="@+id/textView42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="R$2.000,00"
-                android:textStyle="bold"
                 android:textColor="@color/primary_gray"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView50"
-                app:layout_constraintStart_toEndOf="@+id/textView41"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView50" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -417,11 +429,9 @@
             android:id="@+id/constraint3"
             android:layout_width="0dp"
 
-            android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider">
@@ -452,11 +462,11 @@
 
             <TextView
                 android:id="@+id/textView16"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Dentil enxaguante + EscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscova Dentil sortidas + Fio Dental(Secador)"
+                android:layout_width="wrap_content"
                 android:textAlignment="center"
+                android:text="Dentil enxaguante + EscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscovaEscova Dentil sortidas + Fio Dental(Secador)"
                 android:textColor="#3e3e3e"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -470,11 +480,10 @@
                 android:layout_marginTop="20dp"
                 android:text="Dentil enxaguante + Escova Dentil sortidas + Fio Dental(Secador)"
                 android:textAlignment="center"
-                android:textColor="#3e3e3e"
 
+                android:textColor="#3e3e3e"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -484,8 +493,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Dentil enxaguante + Escova Dentil sortidas + Fio Dental(Secador)"
-                android:textAlignment="center"
                 android:textColor="#3e3e3e"
+                android:textAlignment="center"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -497,8 +506,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Dentil enxaguante + Escova Dentil sortidas + Fio Dental(Secador)"
-                android:textAlignment="center"
                 android:textColor="#3e3e3e"
+                android:textAlignment="center"
 
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
